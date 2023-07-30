@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno run --watch ./app/server.ts"
+  },
+  "imports": {
+    "oak": "https://deno.land/x/oak@v12.5.0/mod.ts",
+    "edge.js": "npm:edge.js@^5.5.1",
+    "path": "https://deno.land/std@0.194.0/path/posix.ts",
+    "mongodb": "https://deno.land/x/mongo@v0.31.2/mod.ts",
+    "zod": "https://deno.land/x/zod@v3.21.4/mod.ts",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
+    "sessions": "https://deno.land/x/oak_sessions@v4.1.9/mod.ts"
+  }
+}

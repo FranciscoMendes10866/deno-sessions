@@ -1,0 +1,34 @@
+@layout('layouts/main')
+@set('title', 'Create Account')
+
+@section('body')
+<section>
+  @if(message)
+    <blockquote>{{ message }}</blockquote>
+  @end
+
+  <form action="/signup" method="POST">
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" name="username" type="text" value="" minlength="3" required />
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" value="" required />
+      </div>
+  
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password" value="" minlength="8" required />
+    </div>
+  
+    <div>
+      <button type="submit">Create Account</button>
+      <a href="/login">
+        <small>Go to Login</small>
+      </a>
+    </div>
+  </form>
+</section>
+@end

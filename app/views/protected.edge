@@ -1,0 +1,11 @@
+@layout('layouts/main')
+@set('title', 'Protected')
+
+@section('body')
+<section>
+  <h2>Hi {{ username }}!</h2>
+  <p>This route is secured and requires you to be logged in.</p>
+  <br>
+  <a href="/signout">Logout</a>
+</section>
+@end

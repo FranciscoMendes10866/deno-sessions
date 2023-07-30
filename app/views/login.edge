@@ -1,0 +1,29 @@
+@layout('layouts/main')
+@set('title', 'Login')
+
+@section('body')
+<section>
+  @if(message)
+    <blockquote>{{ message }}</blockquote>
+  @end
+
+  <form action="/signin" method="POST">
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" value="" required />
+      </div>
+  
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password" value="" minlength="8" required />
+    </div>
+  
+    <div>
+      <button type="submit">Login</button>
+      <a href="/">
+        <small>Go to Register</small>
+      </a>
+    </div>
+  </form>
+</section>
+@end
